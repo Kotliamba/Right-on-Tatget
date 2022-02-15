@@ -14,6 +14,8 @@
 		74997AAE27BBDA02009C0177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74997AAD27BBDA02009C0177 /* Assets.xcassets */; };
 		74997AB127BBDA02009C0177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74997AAF27BBDA02009C0177 /* LaunchScreen.storyboard */; };
 		74997ABC27BC11A6009C0177 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABB27BC11A6009C0177 /* Game.swift */; };
+		74997ABE27BC1966009C0177 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABD27BC1966009C0177 /* GameRound.swift */; };
+		74997AC027BC1DBE009C0177 /* RandomValueGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		74997AB027BBDA02009C0177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74997AB227BBDA02009C0177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74997ABB27BC11A6009C0177 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		74997ABD27BC1966009C0177 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
+		74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomValueGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				74997ABB27BC11A6009C0177 /* Game.swift */,
+				74997ABD27BC1966009C0177 /* GameRound.swift */,
+				74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,7 +157,9 @@
 			files = (
 				74997AA927BBDA01009C0177 /* ViewController.swift in Sources */,
 				74997AA527BBDA01009C0177 /* AppDelegate.swift in Sources */,
+				74997AC027BC1DBE009C0177 /* RandomValueGenerator.swift in Sources */,
 				74997AA727BBDA01009C0177 /* SceneDelegate.swift in Sources */,
+				74997ABE27BC1966009C0177 /* GameRound.swift in Sources */,
 				74997ABC27BC11A6009C0177 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kayan.Right-on-Tatget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -345,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kayan.Right-on-Tatget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

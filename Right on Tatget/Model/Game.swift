@@ -8,7 +8,6 @@ protocol GameProtocol{
     
     func restartGame()
     func startNewRound()
-    func calculateScore(with value: Int)
 }
 
 class Game:GameProtocol{
@@ -18,6 +17,7 @@ class Game:GameProtocol{
     private var maxSecretValue: Int
     
     var currentSecretValue: Int = 0
+    var newSecretValue: Int = 0
     
     private var lastRound: Int
     private var currentRound: Int = 1
@@ -30,6 +30,8 @@ class Game:GameProtocol{
         }
     }
     
+    var gameRound: GameRound!
+    
     init?(startValue: Int, endValue: Int, rounds: Int){
         guard startValue <= endValue else {
             return nil
@@ -37,7 +39,7 @@ class Game:GameProtocol{
         minSecretValue = startValue
         maxSecretValue = endValue
         self.lastRound = rounds
-        currentSecretValue = self.getNewSecretValue()
+        currentSecretValue = RandomValueGenerator.getRandomValue(minSecretValue: self.minSecretValue, maxSecretValue: self.maxSecretValue)
     }
     
     func restartGame() {
@@ -47,21 +49,9 @@ class Game:GameProtocol{
     }
     
     func startNewRound() {
-        currentSecretValue = self.getNewSecretValue()
+        currentSecretValue = RandomValueGenerator.getRandomValue(minSecretValue: self.minSecretValue, maxSecretValue: self.maxSecretValue)
+        gameRound = GameRound(score: self.score, currentSecretValue: self.currentSecretValue)
         currentRound += 1
-    }
-    
-    private func getNewSecretValue() -> Int{
-        return (minSecretValue...maxSecretValue).randomElement()!
-    }
-    
-    func calculateScore(with value: Int) {
-        switch value {
-        case 0..<currentSecretValue: score += 50 - currentSecretValue + value
-        case currentSecretValue+1...50: score += 50 - value + currentSecretValue
-        case currentSecretValue: score += 50
-        default: print("sompfingh wrong, number is \(currentSecretValue), slider number is \(value)")
-        }
     }
     
     

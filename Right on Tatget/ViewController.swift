@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        game.calculateScore(with: Int(slider.value))
+        game.score += game.gameRound.calculateScore(with: Int(slider.value))
         if game.isgameEdned {
             showAlertWitchScore(score: game.score)
             game.restartGame()
