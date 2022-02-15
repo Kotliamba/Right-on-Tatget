@@ -13,6 +13,7 @@
 		74997AAC27BBDA01009C0177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74997AAA27BBDA01009C0177 /* Main.storyboard */; };
 		74997AAE27BBDA02009C0177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74997AAD27BBDA02009C0177 /* Assets.xcassets */; };
 		74997AB127BBDA02009C0177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74997AAF27BBDA02009C0177 /* LaunchScreen.storyboard */; };
+		74997ABC27BC11A6009C0177 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABB27BC11A6009C0177 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		74997AAD27BBDA02009C0177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74997AB027BBDA02009C0177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74997AB227BBDA02009C0177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74997ABB27BC11A6009C0177 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		74997AA327BBDA01009C0177 /* Right on Tatget */ = {
 			isa = PBXGroup;
 			children = (
+				74997ABA27BC117E009C0177 /* Model */,
 				74997AA427BBDA01009C0177 /* AppDelegate.swift */,
 				74997AA627BBDA01009C0177 /* SceneDelegate.swift */,
 				74997AA827BBDA01009C0177 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				74997AB227BBDA02009C0177 /* Info.plist */,
 			);
 			path = "Right on Tatget";
+			sourceTree = "<group>";
+		};
+		74997ABA27BC117E009C0177 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74997ABB27BC11A6009C0177 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				74997AA927BBDA01009C0177 /* ViewController.swift in Sources */,
 				74997AA527BBDA01009C0177 /* AppDelegate.swift in Sources */,
 				74997AA727BBDA01009C0177 /* SceneDelegate.swift in Sources */,
+				74997ABC27BC11A6009C0177 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kayan.Right-on-Tatget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -333,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kayan.Right-on-Tatget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

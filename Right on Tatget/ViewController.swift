@@ -13,42 +13,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var value: UILabel!
     @IBOutlet weak var slider: UISlider!
     
-    var number: Int = 0
-    var round: Int = 1
-    var points: Int = 0
-    
+    var game: Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        number = Int.random(in: 1...50)
-        value.text = "\(number)"
+        game = Game(startValue: 1, endValue: 50, rounds: 5)!
+        game.restartGame()
+        
+        value.text = "\(game.currentSecretValue)"
     }
     @IBAction func trySlider(_ sender: UISlider) {
     }
     
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-      
-        let numSlider = Int(slider.value.rounded())
-        switch numSlider {
-        case 0..<number: points += 50 - number + numSlider
-        case number+1...50: points += 50 - numSlider + number
-        case number: points += 50
-        default: print("sompfingh wrong, number is \(number), slider number is \(numSlider)")
-        }
-        if round == 5 {
-            let alert = UIAlertController(title: "Game Over", message: "You are won \(points) points", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Repeat", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            round = 1
-            points = 0
-        } else {
-            self.round += 1
-        }
-        number = Int.random(in: 1...50)
-        value.text = "\(number)"
         
+        game.calculateScore(with: Int(slider.value))
+        if game.isgameEdned {
+            showAlertWitchScore(score: game.score)
+            game.restartGame()
+        } else {
+            game.startNewRound()
+        }
+        value.text = "\(game.currentSecretValue)"
     }
+    func showAlertWitchScore(score: Int){
+        let alert = UIAlertController(title: "Game Over", message: "You are won \(game.score) points", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Repeat", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
 }
 
