@@ -17,46 +17,10 @@ class ViewController: UIViewController {
     var round: Int = 1
     var points: Int = 0
     
-    override func loadView() {
-        super.loadView()
-        
-        print("Loading view")
-        /* This code will create labelView with the version of App.
-         let versionLabel = UILabel(frame: CGRect(x: 30, y: 30, width: 200, height: 20))
-        versionLabel.text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        
-        view.addSubview(versionLabel)
-        */
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        print("View will appear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        print("View did appear")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        print("View will disappear")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        print("View did disapear")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("View did Load")
         number = Int.random(in: 1...50)
         value.text = "\(number)"
     }

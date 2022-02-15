@@ -44,20 +44,11 @@
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ma-6d-sre">
-                                <rect key="frame" x="255" y="824" width="149" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="О программе">
-                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="20"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ma-6d-sre" secondAttribute="trailing" constant="10" id="1Yp-Si-xop"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lh0-mO-gZV" secondAttribute="trailing" constant="20" id="1jS-hC-sih"/>
-                            <constraint firstItem="7ma-6d-sre" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dFN-Vy-9b2"/>
                             <constraint firstItem="Lh0-mO-gZV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="obW-J9-kbF"/>
                             <constraint firstItem="8EB-Q2-f7P" firstAttribute="top" secondItem="Lh0-mO-gZV" secondAttribute="bottom" constant="30" id="tBd-TC-v7w"/>
                             <constraint firstItem="8EB-Q2-f7P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vDb-Hf-oTw"/>
@@ -76,41 +67,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="tgm-wT-teq">
-            <objects>
-                <viewController id="nde-37-Q9T" customClass="SecondViewController" customModule="Right_on_Tatget" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6V7-uh-6vs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18f-x8-Qe8">
-                                <rect key="frame" x="77.5" y="411" width="259.5" height="74"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Вернуться">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Tqk-Lr-ZZQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="18f-x8-Qe8" firstAttribute="centerX" secondItem="6V7-uh-6vs" secondAttribute="centerX" id="YVa-aw-nkd"/>
-                            <constraint firstItem="18f-x8-Qe8" firstAttribute="centerY" secondItem="6V7-uh-6vs" secondAttribute="centerY" id="oiO-3I-tKq"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uua-Kd-Cd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="902.89855072463774" y="83.705357142857139"/>
-        </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
