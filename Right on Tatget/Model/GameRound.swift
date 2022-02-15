@@ -1,15 +1,12 @@
 import Foundation
 
 protocol GameRoundProtocol{
-    var score: Int {get}
     var currentSecretValue: Int {get}
     
     func calculateScore(with value: Int) -> Int
 }
 
 class GameRound: GameRoundProtocol {
-    var score: Int
-    
     var currentSecretValue: Int
     
     func calculateScore(with value: Int) -> Int {
@@ -22,8 +19,7 @@ class GameRound: GameRoundProtocol {
         }
     }
     
-    init(score: Int, currentSecretValue: Int){
-        self.score = score
+    init(currentSecretValue: Int){
         self.currentSecretValue = currentSecretValue
     }
     

@@ -50,7 +50,7 @@ class Game:GameProtocol{
     
     func startNewRound() {
         currentSecretValue = RandomValueGenerator.getRandomValue(minSecretValue: self.minSecretValue, maxSecretValue: self.maxSecretValue)
-        gameRound = GameRound(score: self.score, currentSecretValue: self.currentSecretValue)
+        gameRound = GameRound(currentSecretValue: self.currentSecretValue)
         currentRound += 1
     }
     
