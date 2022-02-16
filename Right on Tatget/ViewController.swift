@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var value: UILabel!
     @IBOutlet weak var slider: UISlider!

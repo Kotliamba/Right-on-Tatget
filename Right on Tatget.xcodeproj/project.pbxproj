@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742BB96D27BD3607008E98AE /* GameColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BB96C27BD3607008E98AE /* GameColorViewController.swift */; };
 		74997AA527BBDA01009C0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997AA427BBDA01009C0177 /* AppDelegate.swift */; };
 		74997AA727BBDA01009C0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997AA627BBDA01009C0177 /* SceneDelegate.swift */; };
 		74997AA927BBDA01009C0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997AA827BBDA01009C0177 /* ViewController.swift */; };
@@ -16,9 +17,11 @@
 		74997ABC27BC11A6009C0177 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABB27BC11A6009C0177 /* Game.swift */; };
 		74997ABE27BC1966009C0177 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABD27BC1966009C0177 /* GameRound.swift */; };
 		74997AC027BC1DBE009C0177 /* RandomValueGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */; };
+		74E7403127BD1AF700BACD67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E7403027BD1AF700BACD67 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		742BB96C27BD3607008E98AE /* GameColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColorViewController.swift; sourceTree = "<group>"; };
 		74997AA127BBDA01009C0177 /* Right on Tatget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on Tatget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74997AA427BBDA01009C0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74997AA627BBDA01009C0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		74997ABB27BC11A6009C0177 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		74997ABD27BC1966009C0177 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
 		74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomValueGenerator.swift; sourceTree = "<group>"; };
+		74E7403027BD1AF700BACD67 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				74997AA427BBDA01009C0177 /* AppDelegate.swift */,
 				74997AA627BBDA01009C0177 /* SceneDelegate.swift */,
 				74997AA827BBDA01009C0177 /* ViewController.swift */,
+				74E7403027BD1AF700BACD67 /* MainViewController.swift */,
+				742BB96C27BD3607008E98AE /* GameColorViewController.swift */,
 				74997AAA27BBDA01009C0177 /* Main.storyboard */,
 				74997AAD27BBDA02009C0177 /* Assets.xcassets */,
 				74997AAF27BBDA02009C0177 /* LaunchScreen.storyboard */,
@@ -155,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742BB96D27BD3607008E98AE /* GameColorViewController.swift in Sources */,
+				74E7403127BD1AF700BACD67 /* MainViewController.swift in Sources */,
 				74997AA927BBDA01009C0177 /* ViewController.swift in Sources */,
 				74997AA527BBDA01009C0177 /* AppDelegate.swift in Sources */,
 				74997AC027BC1DBE009C0177 /* RandomValueGenerator.swift in Sources */,
@@ -323,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kayan.Right-on-Tatget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -353,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kayan.Right-on-Tatget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
