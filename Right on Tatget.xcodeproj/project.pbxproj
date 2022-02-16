@@ -54,7 +54,6 @@
 			children = (
 				74997ABB27BC11A6009C0177 /* Game.swift */,
 				74997ABD27BC1966009C0177 /* GameRound.swift */,
-				74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */,
 			);
 			path = "Model of game slider";
 			sourceTree = "<group>";
@@ -65,6 +64,16 @@
 				742BB97027BD5642008E98AE /* GameColor.swift */,
 			);
 			path = "Model of game color";
+			sourceTree = "<group>";
+		};
+		742BB97227BD5CD4008E98AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				74E7403027BD1AF700BACD67 /* MainViewController.swift */,
+				74997AA827BBDA01009C0177 /* ViewController.swift */,
+				742BB96C27BD3607008E98AE /* GameColorViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		74997A9827BBDA01009C0177 = {
@@ -86,12 +95,10 @@
 		74997AA327BBDA01009C0177 /* Right on Tatget */ = {
 			isa = PBXGroup;
 			children = (
+				742BB97227BD5CD4008E98AE /* ViewControllers */,
 				74997ABA27BC117E009C0177 /* Model */,
 				74997AA427BBDA01009C0177 /* AppDelegate.swift */,
 				74997AA627BBDA01009C0177 /* SceneDelegate.swift */,
-				74997AA827BBDA01009C0177 /* ViewController.swift */,
-				74E7403027BD1AF700BACD67 /* MainViewController.swift */,
-				742BB96C27BD3607008E98AE /* GameColorViewController.swift */,
 				74997AAA27BBDA01009C0177 /* Main.storyboard */,
 				74997AAD27BBDA02009C0177 /* Assets.xcassets */,
 				74997AAF27BBDA02009C0177 /* LaunchScreen.storyboard */,
@@ -103,6 +110,7 @@
 		74997ABA27BC117E009C0177 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */,
 				742BB96F27BD5624008E98AE /* Model of game color */,
 				742BB96E27BD5616008E98AE /* Model of game slider */,
 			);

@@ -22,14 +22,15 @@ class GameColorViewController: UIViewController {
         labelRandomHEX.text = gameColor.labelText
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeButtonStackOrientation()
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        // Here is a bug with VStack if landscape changed at previous screnn
+        // Here is a bug with VStack with horizontal landscape from setup
         super.viewWillTransition(to: size, with: coordinator)
-        if UIDevice.current.orientation.isLandscape{
-            buttonsStack.axis = .horizontal
-        } else {
-            buttonsStack.axis = .vertical
-        }
+        changeButtonStackOrientation()
     }
     
     @IBAction func buttonStackAction(_ sender: UIButton) {
@@ -53,6 +54,15 @@ class GameColorViewController: UIViewController {
         let alert = UIAlertController(title: "Game Over", message: "You have won \(score) points", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true)
+    }
+    
+    
+    func changeButtonStackOrientation(){
+        if UIDevice.current.orientation.isLandscape{
+            buttonsStack.axis = .horizontal
+        } else {
+            buttonsStack.axis = .vertical
+        }
     }
     
 
