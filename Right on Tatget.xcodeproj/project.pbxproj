@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		742BB96D27BD3607008E98AE /* GameColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BB96C27BD3607008E98AE /* GameColorViewController.swift */; };
+		742BB97127BD5642008E98AE /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BB97027BD5642008E98AE /* GameColor.swift */; };
 		74997AA527BBDA01009C0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997AA427BBDA01009C0177 /* AppDelegate.swift */; };
 		74997AA727BBDA01009C0177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997AA627BBDA01009C0177 /* SceneDelegate.swift */; };
 		74997AA927BBDA01009C0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74997AA827BBDA01009C0177 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		742BB96C27BD3607008E98AE /* GameColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColorViewController.swift; sourceTree = "<group>"; };
+		742BB97027BD5642008E98AE /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		74997AA127BBDA01009C0177 /* Right on Tatget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on Tatget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74997AA427BBDA01009C0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74997AA627BBDA01009C0177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		742BB96E27BD5616008E98AE /* Model of game slider */ = {
+			isa = PBXGroup;
+			children = (
+				74997ABB27BC11A6009C0177 /* Game.swift */,
+				74997ABD27BC1966009C0177 /* GameRound.swift */,
+				74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */,
+			);
+			path = "Model of game slider";
+			sourceTree = "<group>";
+		};
+		742BB96F27BD5624008E98AE /* Model of game color */ = {
+			isa = PBXGroup;
+			children = (
+				742BB97027BD5642008E98AE /* GameColor.swift */,
+			);
+			path = "Model of game color";
+			sourceTree = "<group>";
+		};
 		74997A9827BBDA01009C0177 = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +103,8 @@
 		74997ABA27BC117E009C0177 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				74997ABB27BC11A6009C0177 /* Game.swift */,
-				74997ABD27BC1966009C0177 /* GameRound.swift */,
-				74997ABF27BC1DBE009C0177 /* RandomValueGenerator.swift */,
+				742BB96F27BD5624008E98AE /* Model of game color */,
+				742BB96E27BD5616008E98AE /* Model of game slider */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +184,7 @@
 				74E7403127BD1AF700BACD67 /* MainViewController.swift in Sources */,
 				74997AA927BBDA01009C0177 /* ViewController.swift in Sources */,
 				74997AA527BBDA01009C0177 /* AppDelegate.swift in Sources */,
+				742BB97127BD5642008E98AE /* GameColor.swift in Sources */,
 				74997AC027BC1DBE009C0177 /* RandomValueGenerator.swift in Sources */,
 				74997AA727BBDA01009C0177 /* SceneDelegate.swift in Sources */,
 				74997ABE27BC1966009C0177 /* GameRound.swift in Sources */,
