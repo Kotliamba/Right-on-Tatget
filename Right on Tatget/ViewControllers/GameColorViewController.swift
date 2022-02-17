@@ -13,41 +13,49 @@ class GameColorViewController: UIViewController {
     
     @IBOutlet var arrayOfButtonOutlets: [UIButton]!
     @IBOutlet weak var labelRandomHEX: UILabel!
-    @IBOutlet weak var buttonsStack: UIStackView!
+    @IBOutlet weak var buttonsStack: UIStackView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         gameColor = GameColor(arrayOfButtons: arrayOfButtonOutlets)
         labelRandomHEX.text = gameColor.labelText
+        
+        changeButtonStackOrientation(for: traitCollection.verticalSizeClass)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        changeButtonStackOrientation()
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        // Here is a bug with VStack with horizontal landscape from setup
-        super.viewWillTransition(to: size, with: coordinator)
-        changeButtonStackOrientation()
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        //Will transition == change size of view == change landscape orientation
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        changeButtonStackOrientation(for: newCollection.verticalSizeClass)
     }
     
     @IBAction func buttonStackAction(_ sender: UIButton) {
         if sender.titleLabel?.text == gameColor.tittleButton{
-            print("Yes it is!")
             gameColor.score += 1
-        } else {
-            print("Wrong answer!")
         }
         gameColor.roundCounter += 1
+        
         if gameColor.roundCounter == 5 {
             showAlertWithScore(score: gameColor.score)
             gameColor.roundCounter = 0
             gameColor.score = 0
         }
+        
         gameColor.startRound()
         labelRandomHEX.text = gameColor.labelText
+    }
+}
+
+extension GameColorViewController {
+    func changeButtonStackOrientation(for verticalSizeClass: UIUserInterfaceSizeClass){
+        // This function is awesome, UIUserInterfaceSizeClass is saving landscape in enum. Can use it for next times
+        if verticalSizeClass == .compact{
+            buttonsStack?.axis = .horizontal
+        } else {
+            buttonsStack?.axis = .vertical
+        }
     }
     
     func showAlertWithScore(score:Int){
@@ -55,15 +63,4 @@ class GameColorViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true)
     }
-    
-    
-    func changeButtonStackOrientation(){
-        if UIDevice.current.orientation.isLandscape{
-            buttonsStack.axis = .horizontal
-        } else {
-            buttonsStack.axis = .vertical
-        }
-    }
-    
-
 }

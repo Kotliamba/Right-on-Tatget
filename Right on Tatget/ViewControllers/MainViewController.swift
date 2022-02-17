@@ -9,32 +9,28 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var stackButtons: UIStackView!
+    @IBOutlet weak var stackButtons: UIStackView?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        changeButtonStackOrientation(for: traitCollection.verticalSizeClass)
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        if UIDevice.current.orientation.isLandscape{
-            stackButtons.axis = .horizontal
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        changeButtonStackOrientation(for: newCollection.verticalSizeClass)
+    }
+
+}
+
+extension MainViewController{
+    func changeButtonStackOrientation(for verticalSizeClass: UIUserInterfaceSizeClass){
+        // This function is awesome, UIUserInterfaceSizeClass is saving landscape in enum. Can use it for next times
+        if verticalSizeClass == .compact{
+            stackButtons?.axis = .horizontal
         } else {
-            stackButtons.axis = .vertical
+            stackButtons?.axis = .vertical
         }
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
